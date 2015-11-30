@@ -1,0 +1,33 @@
+<div class="panel-group">
+
+<div class="col-md-8 col-xs-8">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<%= image_tag 'logo.png',title:'CouchInn' ,class:'img-responsive center-block' %>
+		</div>
+		<div class="panel-body">
+			<p>
+				pagina principal
+			</p>
+		</div>
+
+		
+		<div class="panel panel-default">
+			
+		</div>
+		<div class="panel-body">
+			<p>
+				<h1> Bienvenido! </h1>
+		<p>  </p>
+
+		<% if user_signed_in? %>
+
+			Bienvenido <%= current_user.email %>
+			
+		<%end%>
+			</p>
+		</div>
+
+	</div>
+</div>
+</div>

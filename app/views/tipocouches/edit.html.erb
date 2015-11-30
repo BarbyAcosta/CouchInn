@@ -1,0 +1,52 @@
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-lg-10">
+
+	<div class="jumbotron"> 
+		<label for=“name"> <font face="arial" size="5" color="green"> Ingrese los datos a modificar </font> </label>
+ 
+ 		<p  
+
+
+		/p>
+
+
+		<%= form_for(@tipocouch) do |f| %> 
+			<% if @tipocouch.errors.any? %>
+  				<div id="error_explanation">
+    				<h2><%= pluralize(@tipocouch.errors.count, "error") %> No se han guardado los cambios:</h2>
+    				<ul>
+    					<% @tipocouch.errors.full_messages.each do |msg| %>
+      						<li><%= msg %></li>
+    					<% end %>
+    				</ul>
+ 				 </div>
+  			<% end %>
+			
+			<p>
+				<%= f.label :name, 'Nuevo tipo de couch' %>
+				<%= f.text_field :name %>
+			</p>
+			
+			<p>
+				<%= f.label :description, 'Descripcion' %>
+				<%= f.text_field :description %>
+			</p>
+		
+		<%= f.submit 'Guardar' %>
+
+    	<% end %> 
+
+		</p> 
+ 
+
+		<p>
+
+			<p> <%= link_to "Volver", href="/welcome/index" %> </p>
+
+		</p> 
+
+
+	</div>
+	
+</div> 

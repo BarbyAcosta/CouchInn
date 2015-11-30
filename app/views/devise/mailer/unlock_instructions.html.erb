@@ -1,0 +1,7 @@
+<p>Hello <%= @resource.email %>!</p>
+
+<p>Tu cuenta ha sido bloqueada, excediste el numero de veces permitidas de acceso</p>
+
+<p>Haz click abajo para desbloquearla</p>
+
+<p><%= link_to 'Desbloquear mi cuenta', unlock_url(@resource, unlock_token: @token) %></p>

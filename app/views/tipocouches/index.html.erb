@@ -1,0 +1,39 @@
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-lg-10">
+
+	<div class="jumbotron"> 
+		<label for=“name"> <font face="arial" size="5" color="green"> A continuación se encuentra el listado de los tipos de couch existentes: </font> </label>
+		<p>
+
+		</p>  
+  		<table class="table">
+
+ 			<tr>
+ 				<th> <label for=“name"> <font face="arial" size="4" color="green"> ID </font> </label> </th>
+				<th> <label for=“name"> <font face="arial" size="4" color="green"> Tipo de Couch </font> </label> </th>
+				<th> <label for=“name"> <font face="arial" size="4" color="green"> Descripción  </font> </label> </th>
+				</tr>
+
+			<% @tipocouches.each do |tipocouch| %>
+
+				<tr> 
+	
+					<td> <label for=“name"> <font face="arial" size="3" color="black"> <%= tipocouch.id %> </font> </label> </td>
+					<td> <label for=“name"> <font face="arial" size="3" color="black"> <%= tipocouch.name %> </font> </label> </td>
+					<td> <label for=“name"> <font face="arial" size="3" color="black"> <%= tipocouch.description %> </font> </label>
+					</td>
+					<td> <label for=“name"> <font face="arial" size="3" color="black">  <%= link_to "Editar",edit_tipocouch_path(tipocouch) %> </font> </label></td>
+					<td> <label for=“name"> <font face="arial" size="3" color="black"> <p> <%= link_to "Eliminar", tipocouch_path(tipocouch), method: :delete, data: { confirm: 'Esta seguro de eliminar la categoría?' } %> </p> 
+
+
+				</tr> 
+	
+			<% end %>
+
+		</table>
+		<p>
+			<a class="btn btn-primary btn-lg" href="/welcome/index" role=“button"> Volver </a>
+		</p> 
+	</div>	
+</div>

@@ -1,0 +1,52 @@
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-lg-10">
+
+	<div class="jumbotron"> 
+		<td><P ALIGN=right>
+                   <a class="btn btn-primary btn-lg" href="/reserves/new" role=“button"> Conviértete en anfitrión </a>
+         <P ALIGN=left>         
+		<label for=“name"> <font face="arial" size="5" color="green"> A continuacion se encuentra el listado de los couchs  </font> </label> 
+
+	
+		<p>
+
+		</p>  
+  	
+  		<table class="table">
+  			
+ 			<tr>
+ 				
+				<th> <label for=“name"> <font face="arial" size="4" color="green">  Nombre del couch </font> </label> </th>
+				<th> <label for=“name"> <font face="arial" size="4" color="green"> Descripción de cada couch </font> </label> </th>
+				<th> <label for=“name"> <font face="arial" size="4" color="green">  Imagen del couch </font> </label> </th>
+			</tr>
+
+			  <% @reserve.each do |r| %>
+
+
+				<tr> 
+					
+                    <td>  <label for=“name"> <font face="arial" size="3" color="black"> <%= r.name %> </font> </label></td>                
+                    
+
+					<td> <label for=“name"> <font face="arial" size="3" color="black"> <%= r.description %> </font> </label></td>
+
+					<td> <label for=“name"> <font face="arial" size="3" color="black"> <%= image_tag r.imageurl, size: '350x250'  %>  </font> </label></td>
+                    
+					
+
+				</tr> 
+	         
+			<% end %>
+
+		</table>
+
+		<p>
+			<a class="btn btn-primary btn-lg" href="/welcome/index" role=“button"> Volver </a>
+		</p> 
+
+
+	</div>
+	
+</div>

@@ -1,0 +1,49 @@
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-lg-10">
+
+	<div class="jumbotron"> 
+		<label for=“name"> <font face="arial" size="5" color="green"> Solicitudes pendientes </font> </label>
+	
+		<p>
+
+		</p>  
+  	
+  		<table class="table">
+
+ 			<tr>
+ 				
+				<th> <label for=“name"> <font face="arial" size="4" color="green"> Nombre de couch </font> </label> </th>
+				<th> <label for=“name"> <font face="arial" size="4" color="green"> Fecha de llegada </font> </label> </th>
+				<th> <label for=“name"> <font face="arial" size="4" color="green"> Fecha de salida </font> </label> </th>
+			</tr>
+
+			  <% @couch.each do |c| %>
+                 
+
+				<tr> 
+					
+                    <td>  <label for=“name"> <font face="arial" size="3" color="black"> <%= c.name %> </font> </label></td>     
+                    				
+					<td> <label for=“name"> <font face="arial" size="3" color="black"> <%= c.fechaini %> </font> </label></td>
+
+					<td> <label for=“name"> <font face="arial" size="3" color="black"> <%= c.fechafin %> </font> </label></td>
+
+					<td> <label for=“name"> <font face="arial" size="3" color="black"> <p> <%= link_to "Aceptar", couch_path(c), method: :save, data: { confirm: 'Esta seguro que quiere aceptar la reserva?' } %> </p> 
+                     
+					<td> <label for=“name"> <font face="arial" size="3" color="black"> <p> <%= link_to "Rechazar", couch_path(c), method: :delete, data: { confirm: 'Esta seguro que quiere rechazar la reserva?' } %> </p> 
+
+				</tr> 
+	        
+			<% end %>
+
+		</table>
+
+		<p>
+			<a class="btn btn-primary btn-lg" href="/welcome/index" role=“button"> Volver </a>
+		</p> 
+
+
+	</div>
+	
+</div> 
