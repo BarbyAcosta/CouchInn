@@ -4,7 +4,7 @@ class CreateReserves < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.string :imageurl
-
+      t.string :localidad
       t.timestamps
     end
   end

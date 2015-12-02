@@ -3,7 +3,6 @@ class CreateTipocouches < ActiveRecord::Migration
     create_table :tipocouches do |t|
     	t.string :name
     	t.text :description
-    
     	t.timestamps
 
     end

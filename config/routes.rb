@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  #ruta de la vista "acerca de"
+  get 'posters/show'
 
   get 'couches/index'
 
