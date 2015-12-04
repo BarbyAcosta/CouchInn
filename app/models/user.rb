@@ -6,6 +6,5 @@ class User < ActiveRecord::Base
 
   has_many :couches
   has_many :counts
-
   
 end

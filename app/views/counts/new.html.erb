@@ -8,7 +8,7 @@
 	  
 		
 		<form action="#">
-			<% @u.each do |c| %>
+			
         Ingrese su numero de tarjeta:      
      
 		<input type="text" id="numtarj" required pattern="[0123456789]{16}">
@@ -23,8 +23,8 @@
 		<input type="date" id="fecha_venc" name="fecha_ven" required>
      <p>
 		</p>	
-		<td> <%= link_to count_path(id: c.id) do %> enviar <% end %> </td>
-		<% end %>
+		<td> <%= link_to count_path() do %> enviar <% end %> </td>
+		
     </form>
    
  
