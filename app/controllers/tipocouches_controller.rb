@@ -9,7 +9,7 @@ class TipocouchesController < ApplicationController
   end
 
   def index
-    @tipocouches = Tipocouch.all
+    @tipocouches = Tipocouch.all.order(:id)
   end
 
   def new

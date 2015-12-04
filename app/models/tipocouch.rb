@@ -5,4 +5,7 @@ class Tipocouch < ActiveRecord::Base
 	validates_uniqueness_of :name
 	#default_scope -> {order("id_at_desc")}
 	validates :name, presence: true, length: { minimum: 4 }
+	has_many :couches
+
+	belongs_to :user
 end

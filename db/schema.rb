@@ -11,23 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151127221545) do
+ActiveRecord::Schema.define(version: 20151203232254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "couches", force: true do |t|
     t.string   "name"
-    t.string   "fechaini"
-    t.string   "fechafin"
+    t.string   "description"
+    t.string   "imageurl"
+    t.string   "localidad"
+    t.string   "capacidad"
+    t.integer  "user_id"
+    t.integer  "tipocouch_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "counts", force: true do |t|
+    t.string   "dni"
+    t.string   "numtarj"
+    t.string   "venc"
+    t.string   "cod"
+    t.string   "fechavenc"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "reserves", force: true do |t|
     t.string   "name"
-    t.string   "description"
-    t.string   "imageurl"
+    t.string   "fechaini"
+    t.string   "fechafin"
+    t.integer  "user_id"
+    t.boolean  "confirmada"
+    t.integer  "couch_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,18 +57,22 @@ ActiveRecord::Schema.define(version: 20151127221545) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "precio_premium"
+    t.datetime "fecha_premium"
+    t.boolean  "premium",                default: false
+    t.boolean  "admin",                  default: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

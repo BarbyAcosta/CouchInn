@@ -15,13 +15,13 @@ Tipocouch.create(name:'Sillon', description: "Se ofrece lugar en el living de la
 Tipocouch.create(name:'Casa', description: "Se ofrece una casa sin necesidad de convivencia con el dueño")
 
 puts "cargo categoria de reservas"
-Reserve.create(name:'Casa',description:"Hermosa casa con ubicacion excelente, capacidad para 5 personas",imageurl:"https://dl.dropboxusercontent.com/u/34731102/casa.jpg")
-Reserve.create(name:'Sillon',description:"Confortable sillon para una persona",imageurl:"https://dl.dropboxusercontent.com/u/34731102/sillon.jpg")
-Reserve.create(name:'Departamento',description:"Hermoso departamento, excelente vista, para 3 personas",imageurl:"https://dl.dropboxusercontent.com/u/34731102/Departamento%20barato.jpg")
-Reserve.create(name:'Habitacion',description:"Espaciosa habitacion para 2 personas",imageurl:"https://dl.dropboxusercontent.com/u/34731102/habitacion.jpg")
-Reserve.create(name:'Piso',description:"Amplia vivienda que consta de un piso capacidad 5 personas",imageurl:"https://dl.dropboxusercontent.com/u/34731102/piso.jpg")
+Couch.create(name:'Casa',description:"Hermosa casa con ubicacion excelente",imageurl:"https://dl.dropboxusercontent.com/u/34731102/casa.jpg" ,tipocouch_id:1, capacidad:5 ,localidad: "La Plata" )
+Couch.create(name:'Sillon',description:"Confortable sillon ",imageurl:"https://dl.dropboxusercontent.com/u/34731102/sillon.jpg", tipocouch_id:2, capacidad:3 ,localidad: "Neuquen" )
+Couch.create(name:'Departamento',description:"Hermoso departamento, excelente vista",imageurl:"https://dl.dropboxusercontent.com/u/34731102/Departamento%20barato.jpg", tipocouch_id:3, capacidad:1 ,localidad: "Misiones" )
+Couch.create(name:'Habitacion',description:"Espaciosa habitacion",imageurl:"https://dl.dropboxusercontent.com/u/34731102/habitacion.jpg", tipocouch_id:4 , capacidad:2 ,localidad: "La Rioja" )
+Couch.create(name:'Piso',description:"Amplia vivienda que consta de un piso",imageurl:"https://dl.dropboxusercontent.com/u/34731102/piso.jpg", tipocouch_id:5, capacidad:3 ,localidad: "Cordoba" )
 
 puts "Cargo solicitudes de reserva"
-Couch.create(name:'Casa',fechaini:'12/12/2016',fechafin:'20/12/2016')
-Couch.create(name:'Sillon',fechaini:'1/12/2016',fechafin:'5/12/2016')
-Couch.create(name:'Departamento',fechaini:'7/2/2016',fechafin:'9/2/2016')
+Reserve.create(name:'Casa',fechaini:'12/12/2016',fechafin:'20/12/2016')
+Reserve.create(name:'Sillon',fechaini:'1/12/2016',fechafin:'5/12/2016')
+Reserve.create(name:'Departamento',fechaini:'7/2/2016',fechafin:'9/2/2016')

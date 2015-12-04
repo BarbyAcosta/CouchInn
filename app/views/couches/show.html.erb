@@ -1,2 +1,53 @@
-<h1>Couches#show</h1>
-<p>Find me in app/views/couches/show.html.erb</p>
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-lg-10">
+
+	<div class="jumbotron"> 
+		<td><P ALIGN=right>
+                   <a class="btn btn-primary btn-lg" href="/couches/new" role=“button"> Conviértete en anfitrión </a>
+         <P ALIGN=left>         
+		<label for=“name"> <font face="arial" size="5" color="green"> A continuacion se encuentra el listado de los couchs  </font> </label> 
+
+	
+		<p>
+
+		</p>  
+  	
+  		<table class="table">
+  			
+ 			<tr>
+ 				
+				<th> <label for=“name"> <font face="arial" size="4" color="green">  Descripcion del couch </font> </label> </th>
+				
+				<th> <label for=“name"> <font face="arial" size="4" color="green">  Nombre del couch </font> </label> </th>
+
+				<th> <label for=“name"> <font face="arial" size="4" color="green">  Localidad </font> </label> </th>
+
+				<th> <label for=“name"> <font face="arial" size="4" color="green">  Capacidad </font> </label> </th>
+
+				<th> <label for=“name"> <font face="arial" size="4" color="green">  Usuario al que pertenece </font> </label> </th>
+			</tr>
+                
+                   <td>  <label for=“name"> <font face="arial" size="3" color="black"> <%= @couch.description %> </font> </label></td>
+		           
+		           <td>  <label for=“name"> <font face="arial" size="3" color="black"> <%= @couch.name %> </font> </label></td>
+
+		           <td>  <label for=“name"> <font face="arial" size="3" color="black"> <%= @couch.localidad %> </font> </label></td>
+
+		           <td>  <label for=“name"> <font face="arial" size="3" color="black"> <%= @couch.capacidad %> </font> </label></td>
+
+		           <td>  <label for=“name"> <font face="arial" size="3" color="black"> <%= @couch.user_id %> </font> </label></td>
+		                   
+			
+
+		</table>
+
+
+		<p>
+			<a class="btn btn-primary btn-lg" href="/couches/index" role=“button"> Volver </a>
+		</p> 
+
+
+	</div>
+	
+</div>

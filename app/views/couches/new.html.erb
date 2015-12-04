@@ -1,2 +1,43 @@
-<h1>Couches#new</h1>
-<p>Find me in app/views/couches/new.html.erb</p>
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-lg-10">
+
+	<div class="jumbotron"> 
+		<label for=“name"> <font face="arial" size="5" color="green"> Publica tu couch  </font> </label>
+	
+	<%= form_for(@couch) do |f| %> 
+      
+       
+       <%= f.collection_select(:tipocouch_id, Tipocouch.all, :id, :name) %>
+       
+        <p>
+		</p>
+		
+		<%= f.label :name, 'Ingrese nombre' %>
+		<%= f.text_field :name %> <br>
+		<p>
+		</p>
+		
+		<%= f.label :description, 'Ingrese una breve descripcion de tu couch' %>
+		<%= f.text_field :description %> <br>
+        <p>
+		</p>	
+		<%= f.label :imageurl, 'Ingrese la imagen de tu couch(url)' %>
+		<%= f.text_field :imageurl %> <br>
+<p>
+		</p>	
+		<%= f.submit 'Guardar Couch' %>
+
+    <% end %>
+ 
+
+		<p>
+
+			<p> <%= link_to "Volver", href="/couches/index" %> </p>
+
+		</p> 
+
+
+	</div>
+	
+</div>

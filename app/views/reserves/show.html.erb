@@ -1,2 +1,43 @@
-<h1>Reserves#show</h1>
-<p>Find me in app/views/reserves/show.html.erb</p>
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-lg-10">
+
+	<div class="jumbotron"> 
+		<td><P ALIGN=right>
+                   <a class="btn btn-primary btn-lg" href="/reserves/new" role=“button"> Conviértete en anfitrión </a>
+         <P ALIGN=left>         
+		<label for=“name"> <font face="arial" size="5" color="green"> A continuacion se encuentra el listado de los couchs  </font> </label> 
+
+	
+		<p>
+
+		</p>  
+  	
+  		<table class="table">
+  			
+ 			<tr>
+ 				
+				<th> <label for=“name"> <font face="arial" size="4" color="green">  Descripcion del couch </font> </label> </th>
+				
+				
+			</tr>
+                
+                  <%= @reserve.description %> 
+		          <p><%= @reserve.description %> </p>
+		          
+
+			  
+
+         
+			
+
+		</table>
+
+		<p>
+			<a class="btn btn-primary btn-lg" href="/welcome/index" role=“button"> Volver </a>
+		</p> 
+
+
+	</div>
+	
+</div>

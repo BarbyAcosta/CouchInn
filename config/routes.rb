@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
-  #ruta de la vista "acerca de"
-  get 'posters/show'
+
+  get 'counts/index'
+
+  get 'counts/show'
+
+  get 'counts/new'
+
+  get 'counts/edit'
+
+  get 'counts/create'
+
+  get 'counts/update'
+
+  get 'counts/destroy'
 
   get 'couches/index'
 
@@ -30,9 +42,21 @@ Rails.application.routes.draw do
 
   get 'reserves/destroy'
 
+  #rutas para los reportes de ganacias
+  #y usuarios registrados entre dos fechas
+  get 'reports/ganancias'
+
+  get 'reports/registrados'
+
+  #ruta de la vista "acerca de"
+  get 'posters/show'
+
+  
+
   resources :tipocouches
   resources :reserves
   resources :couches
+  resources :counts
 
   devise_for :users
   get 'welcome/index'

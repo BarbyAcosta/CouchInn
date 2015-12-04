@@ -9,8 +9,17 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
 
-      ## Rememberable
+      ## Rememberable fecha de creacion de usuario
       t.datetime :remember_created_at
+
+      ##Para ver los reportes de ganancias entre dos fechas
+      t.integer :precio_premium
+      t.datetime :fecha_premium
+
+      ##Campos que indican si es premium o si es administrador
+      t.boolean :premium, default: false
+      t. boolean :admin, default: false
+
 
       ## Trackable
       t.integer  :sign_in_count, default: 0, null: false

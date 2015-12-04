@@ -2,11 +2,23 @@
 
 
 	<% if user_signed_in? %>
+
+		<% if current_user.admin? %>
 	 
-		<p> <%= link_to "Ver listado de los tipos de Couches", tipocouches_path %> </p>
-		<p> <%= link_to "Dar de alta un tipo de Couch", new_tipocouch_path %> </p>
-		<p> <%= link_to "Ver lista de Couches",reserves_index_path %> </p>
-		<p> <%= link_to "Reservas",couches_index_path %> </p>
+			<p> <%= link_to "Ver listado de los tipos de Couches", tipocouches_path %> </p>
+			<p> <%= link_to "Dar de alta un tipo de Couch", new_tipocouch_path %> </p>
+			<p> <%= link_to "Ver lista de Couches",couches_index_path %> </p>
+			<p> <%= link_to "Reservas",reserves_index_path %> </p>
+			<p> <%= link_to "pasar mi cuenta a premium ",counts_new_path %> </p>
+
+		<% else %>
+
+			<p> <%= link_to "Ver lista de Couches",couches_index_path %> </p>
+			<p> <%= link_to "Reservas",reserves_index_path %> </p>
+			<p> <%= link_to "pasar mi cuenta a premium ",counts_new_path %> </p>
+
+		<% end %>
+
 	 
 	<% end %>
 	

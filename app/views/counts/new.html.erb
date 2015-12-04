@@ -1,0 +1,41 @@
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-lg-10">
+
+	<div class="jumbotron"> 
+		<label for=“name"> <font face="arial" size="5" color="green"> Ingresa tus datos  </font> </label>
+	
+	  
+		
+		<form action="#">
+			<% @u.each do |c| %>
+        Ingrese su numero de tarjeta:      
+     
+		<input type="text" id="numtarj" required pattern="[0123456789]{16}">
+		<p>
+		</p>
+		
+		Ingrese el codigo de la tarjeta
+		<input type="text" id="cod" required pattern="[0123456789]{3}">
+        <p>
+		</p>	
+		Ingrese la fecha de vencimiento de la tarjeta
+		<input type="date" id="fecha_venc" name="fecha_ven" required>
+     <p>
+		</p>	
+		<td> <%= link_to count_path(id: c.id) do %> enviar <% end %> </td>
+		<% end %>
+    </form>
+   
+ 
+
+		<p>
+
+			<p> <%= link_to "Volver", href="/couches/index" %> </p>
+
+		</p> 
+
+
+	</div>
+	
+</div>

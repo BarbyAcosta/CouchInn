@@ -4,9 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  #validate :validar_edad
+  has_many :couches
+  has_many :counts
 
-  #def validar_edad
-  #	if Validacion de fecha
-  #		errors.add(:fecha_nac, "No es mayor de 18 años")
+  has_many :tipocouches
+  #Busca la primera persona que se registro y dice que es administrador.
+  User.find(1).update_attribute :admin, true
 end
