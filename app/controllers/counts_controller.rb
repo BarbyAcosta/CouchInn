@@ -15,10 +15,8 @@ class CountsController < ApplicationController
 
   def new
     @count = Count.new
-    @u = User.all
-    #no tendrias que hacer all porque te pide los datos para la cantidad de personas registradas
-    #si hay 2 usuarios, te pide los datos de los dos uno debajo del otro  
     
+        
   end
 
   def edit

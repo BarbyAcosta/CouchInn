@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :couches
   has_many :counts
 
-  has_many :tipocouches
+  
   #Busca la primera persona que se registro y dice que es administrador.
-  User.find(1).update_attribute :admin, true
+  #User.find(1).update_attribute :admin, true
 end
