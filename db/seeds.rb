@@ -25,3 +25,4 @@ puts "Cargo solicitudes de reserva"
 Reserve.create(name:'Casa',fechaini:'12/12/2016',fechafin:'20/12/2016')
 Reserve.create(name:'Sillon',fechaini:'1/12/2016',fechafin:'5/12/2016')
 Reserve.create(name:'Departamento',fechaini:'7/2/2016',fechafin:'9/2/2016')
+
