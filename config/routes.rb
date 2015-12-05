@@ -56,7 +56,7 @@ Rails.application.routes.draw do
   resources :tipocouches
   resources :reserves
   resources :couches do
-  get 'mis_couches', on: :collection 
+   get 'mis_couches', on: :collection 
   end
   resources :counts
 

@@ -9,7 +9,7 @@ class CouchesController < ApplicationController
     @couch= Couch.all
   end
 
-def mis_couches
+  def mis_couches
     @couches = current_user.couches
    end 
 
@@ -42,6 +42,7 @@ def mis_couches
 
   def destroy
     @couch.destroy
+    redirect_to couches_path
   end
   
 
