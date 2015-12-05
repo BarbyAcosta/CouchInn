@@ -6,5 +6,4 @@ class Tipocouch < ActiveRecord::Base
 	#default_scope -> {order("id_at_desc")}
 	validates :name, presence: true, length: { minimum: 4 }
 	has_many :couches
-
 end
