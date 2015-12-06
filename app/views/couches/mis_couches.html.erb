@@ -30,8 +30,10 @@
 
  			      <td>  <label for=“localidad"> <font face="arial" size="3" color="black"> <%= couch.capacidad %> </font> </label></td>
 
- 			      <td> <label for=“name"> <font face="arial" size="3" color="black"> <p> <%= link_to "Eliminar", couch_path(couch), method: :delete, data: { confirm: 'Esta seguro de eliminar la categoría?' } %> </p>
- 			</tr>
+                 <td> <label for=“name"> <font face="arial" size="3" color="black">  <%= link_to "Editar",edit_couch_path(couch) %> </font> </label></td>
+
+
+ 			      <td> <label for=“name"> <font face="arial" size="3" color="black"> <%= link_to "Eliminar", couch_path(couch), method: :delete, data: { confirm: 'Esta seguro de eliminar la categoría?' } %>  			</tr>
      <% end %>
 		</table>
 
