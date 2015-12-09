@@ -7,16 +7,30 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
 
-    <p> <%= f.label :name, 'Nombre' %> </p>
-    <p> <%= f.text_field :name %> </p>
-    <p> <%= f.label :lastname, 'Apellido' %> </p>
-    <p> <%= f.text_field :lastname %> </p>
-    <p> <%= f.label :dni, 'DNI' %> </p>
-    <p> <%= f.text_field :dni %> </p>
-    <p> <%= f.label :provincia, 'Provincia' %> </p>
-    <p> <%= f.text_field :provincia %> </p>
-    <p> <%= f.label :localidad, 'Localidad' %> </p>
-    <p> <%= f.text_field :localidad %> </p>
+    <div class="form-group">
+        <p><%= f.label :name, 'Nombre' %></p>
+        <p><%= f.text_field :name, autofocus: true %></p>
+    </div>
+
+    <div class="form-group">
+        <p><%= f.label :lastname, 'Apellido' %></p>
+        <p><%= f.text_field :lastname %></p>
+    </div>
+
+    <div class="form-group">
+        <p><%= f.label :dni, 'DNI' %></p>
+        <p><%= f.text_field :dni %></p>
+    </div>
+
+    <div class="form-group">
+        <p><%= f.label :provincia, 'Provincia' %></p>
+        <p><%= f.text_field :provincia %></p>
+    </div>
+
+    <div class="form-group">
+        <p><%= f.label :localidad, 'Localidad' %></p>
+        <p><%= f.text_field :localidad %></p>
+    </div>
     
     <div class="form-group">
     <%= f.label :email %><br />

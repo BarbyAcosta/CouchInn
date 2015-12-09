@@ -1,8 +1,7 @@
 class ReportsController < ApplicationController
-	before
   def ganancias
-  	@usuarios= User.where(:remember_created_at < "@fecha_fin", :remember_created_at > "@fecha_inicio")
-  	#usar between
+  	@usuarios= User.where(:remember_created_at.between?(@fecha_inicio,@fecha_fin))
+  	#usar between t3.between?(t1,t2)
   end
 
   def registrados

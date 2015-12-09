@@ -59,18 +59,18 @@ ActiveRecord::Schema.define(version: 20151203232254) do
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
-    t.string   "name"
-    t.string   "lastname"
-    t.string   "dni"
-    t.string   "provincia"
-    t.string   "localidad"
+    t.boolean  "premium",                default: false
+    t.boolean  "admin",                  default: false
+    t.string   "name",                   default: "",    null: false
+    t.string   "lastname",               default: "",    null: false
+    t.string   "dni",                    default: "",    null: false
+    t.string   "provincia",              default: "",    null: false
+    t.string   "localidad",              default: "",    null: false
+    t.integer  "precio_premium"
+    t.datetime "fecha_premium",                          
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "precio_premium"
-    t.datetime "fecha_premium"
-    t.boolean  "premium",                default: false
-    t.boolean  "admin",                  default: false
     t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"

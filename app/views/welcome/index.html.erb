@@ -22,7 +22,7 @@
 
 		<% if user_signed_in? %>
 
-			Bienvenido <%= current_user.name %> <%= current_user.lastname %>
+			Bienvenido <%= current_user.email %> <%= current_user.name %> <%= current_user.lastname %> <%= current_user.localidad %>
 			
 		<%end%>
 			</p>

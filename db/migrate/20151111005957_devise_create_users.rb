@@ -5,6 +5,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
+      ##Campos que indican si es premium o si es administrador
+      t.boolean :premium, default: false
+      t. boolean :admin, default: false
+
       ## Datos extras para la registracion
       t.string :name, null: false, default: ""
       t.string :lastname, null: false, default: ""
@@ -12,21 +16,16 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :provincia, null: false, default: ""
       t.string :localidad, null: false, default: ""
 
+      ##Para ver los reportes de ganancias entre dos fechas
+      t.integer :precio_premium
+      t.datetime :fecha_premium
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
 
       ## Rememberable fecha de creacion de usuario
       t.datetime :remember_created_at
-
-      ##Para ver los reportes de ganancias entre dos fechas
-      t.integer :precio_premium, null: false, default: ""
-      t.datetime :fecha_premium, null: false, default: ""
-
-      ##Campos que indican si es premium o si es administrador
-      t.boolean :premium, default: false
-      t. boolean :admin, default: false
-
 
       ## Trackable
       t.integer  :sign_in_count, default: 0, null: false
