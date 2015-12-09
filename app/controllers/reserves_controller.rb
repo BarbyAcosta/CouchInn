@@ -19,14 +19,14 @@ class ReservesController < ApplicationController
   end
 
   def create
-    @reserve = Reserve.new(params.require(:reserve).permit(:name, :fechaini, :fechafin, :user_id, :confirmada, :couch_id))
+    @reserve = Reserve.new(params.require(:reserve).permit(:name, :fechaini, :fechafin, :confirmada, :couch_id, :user_id))
     @reserve.save
 
     redirect_to reserves_path
   end
 
   def update
-     @reserve.update_attributes(params.require(:reserve).permit(:name, :fechaini, :fechafin, :user_id, :confirmada, :couch_id))
+     @reserve.update_attributes(params.require(:reserve).permit(:name, :fechaini, :fechafin, :confirmada, :couch_id , :user_id))
      redirect_to reserves_path
   end
 
