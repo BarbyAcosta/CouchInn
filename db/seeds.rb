@@ -27,7 +27,7 @@ Couch.create(name:'Habitacion',description:"Espaciosa habitacion",imageurl:"http
 Couch.create(name:'Piso',description:"Amplia vivienda que consta de un piso",imageurl:"https://dl.dropboxusercontent.com/u/34731102/piso.jpg", tipocouch_id:5, capacidad:3 ,localidad: "Cordoba" ,user: u3 )
 
 puts "Cargo solicitudes de reserva"
-Reserve.create(name:'Casa',fechaini:'12/12/2016',fechafin:'20/12/2016', confirmada: 'false',couch_id: 1 )
-Reserve.create(name:'Sillon',fechaini:'1/12/2016',fechafin:'5/12/2016',  confirmada: 'false',couch_id: 2)
-Reserve.create(name:'Departamento',fechaini:'7/2/2016',fechafin:'9/2/2016' , confirmada: 'false',couch_id: 3)
+Reserve.create(name:'Casa',fechaini:'12/12/2016',fechafin:'20/12/2016', confirmada: 'false',couch_id: 1 , user: u1 )
+Reserve.create(name:'Sillon',fechaini:'1/12/2016',fechafin:'5/12/2016',  confirmada: 'false',couch_id: 2 , user: u2)
+Reserve.create(name:'Departamento',fechaini:'7/2/2016',fechafin:'9/2/2016' , confirmada: 'false',couch_id: 3 , user: u2)
 
