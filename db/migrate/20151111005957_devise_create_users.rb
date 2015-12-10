@@ -15,6 +15,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :dni, null: false, default: ""
       t.string :provincia, null: false, default: ""
       t.string :localidad, null: false, default: ""
+      t.string :genero, null: false, default: ""
 
       ##Para ver los reportes de ganancias entre dos fechas
       t.integer :precio_premium

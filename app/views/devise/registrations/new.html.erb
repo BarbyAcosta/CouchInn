@@ -28,9 +28,13 @@
             </div>
 
             <div class="form-group">
-                
-                    <%= f.label :lastname, 'Apellido' %>
+                <%= f.label :lastname, 'Apellido' %>
                 <%= f.text_field :lastname, class:'form-control' %>
+            </div>
+
+            <div class="form-group">
+                <div><%= f.check_box :genero, {}, true %> <%= f.label :genero, "Mujer" %> </div>
+                <div><%= f.check_box :genero, {}, false %> <%= f.label :genero, "Hombre" %> </div>
             </div>
 
             <div class="form-group">

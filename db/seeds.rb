@@ -8,13 +8,13 @@
 
 puts "Cargo algunos usuarios"
 if User.where(email: 'barby@live.com.ar').empty?
-	u1=User.create(email: 'barby@live.com.ar', name: 'Barbara', lastname: 'Acosta', dni: '37363795', provincia: 'Buenos Aires', localidad: 'La Plata', password: 'contraseña' , password_confirmation: 'contraseña', premium: 'false', admin: 'true')
+	u1=User.create(email: 'barby@live.com.ar', name: 'Barbara', lastname: 'Acosta', genero: 'Mujer', dni: '37363795', provincia: 'Buenos Aires', localidad: 'La Plata', password: 'contraseña' , password_confirmation: 'contraseña', premium: 'false', admin: 'true')
 end
 if User.where(email: 'otro@live.com.ar').empty?
-	u2=User.create(email: 'otro@live.com.ar', name: 'Otra', lastname: 'Persona', dni: '1236541', provincia: 'Buenos Aires', localidad: 'La Plata', password: 'contraseña',  password_confirmation: 'contraseña', premium: 'false', admin: 'false')
+	u2=User.create(email: 'otro@live.com.ar', name: 'Otra', lastname: 'Persona', genero: 'Hombre', dni: '1236541', provincia: 'Buenos Aires', localidad: 'La Plata', password: 'contraseña',  password_confirmation: 'contraseña', premium: 'false', admin: 'false')
 end
 if User.where(email: 'gina@live.com.ar').empty?
-	u3=User.create(email: 'gina@live.com.ar', name: 'Gina', lastname: 'Galvez Huerta', dni: '3456987', provincia: 'Buenos Aires', localidad: 'La Plata',password: 'contraseña',  password_confirmation: 'contraseña',premium: 'false', admin: 'true')
+	u3=User.create(email: 'gina@live.com.ar', name: 'Gina', lastname: 'Galvez Huerta', genero: 'Mujer', dni: '3456987', provincia: 'Buenos Aires', localidad: 'La Plata',password: 'contraseña',  password_confirmation: 'contraseña',premium: 'false', admin: 'true')
 end
 
 puts "Cargo las categorias de TipoCouch"

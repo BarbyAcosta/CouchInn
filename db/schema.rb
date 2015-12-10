@@ -66,8 +66,9 @@ ActiveRecord::Schema.define(version: 20151203232254) do
     t.string   "dni",                    default: "",    null: false
     t.string   "provincia",              default: "",    null: false
     t.string   "localidad",              default: "",    null: false
+    t.string   "genero",                 default: "",    null: false
     t.integer  "precio_premium"
-    t.datetime "fecha_premium",                          
+    t.datetime "fecha_premium"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

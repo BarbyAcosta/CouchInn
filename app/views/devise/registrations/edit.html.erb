@@ -8,28 +8,33 @@
     <%= devise_error_messages! %>
 
     <div class="form-group">
-        <p><%= f.label :name, 'Nombre' %></p>
-        <p><%= f.text_field :name, autofocus: true %></p>
+        <%= f.label :name, 'Nombre ' %>
+        <%= f.text_field :name, autofocus: true, class:'form-control' %>
     </div>
 
     <div class="form-group">
-        <p><%= f.label :lastname, 'Apellido' %></p>
-        <p><%= f.text_field :lastname %></p>
+        <%= f.label :lastname, 'Apellido ' %>
+        <%= f.text_field :lastname, class:'form-control'%>
     </div>
 
     <div class="form-group">
-        <p><%= f.label :dni, 'DNI' %></p>
-        <p><%= f.text_field :dni %></p>
+        <div><%= f.check_box :genero, {}, true %> <%= f.label :genero, "Mujer" %> </div>
+        <div><%= f.check_box :genero, {}, false %> <%= f.label :genero, "Hombre" %> </div>
     </div>
 
     <div class="form-group">
-        <p><%= f.label :provincia, 'Provincia' %></p>
-        <p><%= f.text_field :provincia %></p>
+        <%= f.label :dni, 'DNI ' %>
+        <%= f.text_field :dni, class:'form-control' %>
     </div>
 
     <div class="form-group">
-        <p><%= f.label :localidad, 'Localidad' %></p>
-        <p><%= f.text_field :localidad %></p>
+        <%= f.label :provincia, 'Provincia ' %>
+        <%= f.text_field :provincia, class:'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :localidad, 'Localidad ' %>
+    <%= f.text_field :localidad, class:'form-control' %>
     </div>
     
     <div class="form-group">
