@@ -9,10 +9,11 @@ class User < ActiveRecord::Base
 	validates :lastname, presence: true, length: { minimum: 3 }
 	validates :provincia, presence: true, length: { minimum: 3 }
 	validates :localidad, presence: true, length: { minimum: 3 }
-  validates :genero, presence: true
+  #validates :genero, presence: true
 
-	validates :dni, presence: true, length: {is: 7}
+	validates :dni, presence: true, uniqueness: true, length: {is: 8}
 	validates_numericality_of :dni, :message => "Debe ingresar numeros"
+
 
 
   has_many :couches

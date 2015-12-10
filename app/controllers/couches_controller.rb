@@ -11,10 +11,11 @@ class CouchesController < ApplicationController
 
   def mis_couches
     @couches = current_user.couches
-   end 
+  end 
 
   def show    
     @couch = Couch.find(params[:id])
+    @user = @couch.user
   end
 
   def new
