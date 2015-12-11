@@ -8,5 +8,6 @@ class Couch < ActiveRecord::Base
 
 	belongs_to :tipocouch
 	belongs_to :user
+	belongs_to :count
 	has_many :reserves
 end

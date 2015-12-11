@@ -8,18 +8,20 @@ class ReservesController < ApplicationController
      @reserve= Reserve.all
   end
 
-  def show    
+  def show  
+  @reserve = Reserve.find(params[:id])
+    @user = @reserve.user  
   end
 
   def new
-     @reserve = Reserve.new
+      @reserve = Reserve.new(couch_id: params[:couch_id])
   end
 
   def edit
   end
 
   def create
-    @reserve = Reserve.new(params.require(:reserve).permit(:name, :fechaini, :fechafin, :confirmada, :couch_id, :user_id))
+    @reserve = Reserve.new(params.require(:reserve).permit(:name, :fechaini, :fechafin, :couch_id ))
     @reserve.save
 
     redirect_to reserves_path

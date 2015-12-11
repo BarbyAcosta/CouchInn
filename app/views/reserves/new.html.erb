@@ -1,9 +1,10 @@
-<form action="/reserves" method="get">
-   
-   <label> Indicar la fecha de ida </label>
-   <input type="date" id="fecha_nac" name="fecha_nacimiento" required>
+<%= form_for @reserve do |f| %>   
+   <label> Indicar la fecha de ida </label> </br>
+   <%= f.text_field :fechaini, type: 'date' %></br>
 
-   <label> Indicar la fecha de vuelta </label>
-   <input type="date" id="fecha_nac" name="fecha_nacimiento" required>
+   <label> Indicar la fecha de vuelta </label> </br>
+   <%= f.text_field :fechafin, type: 'date' %> </br>
+
+   <%= f.hidden_field :couch_id %>
    <input type="submit" value="Enviar" />
-</form>
+<% end %>

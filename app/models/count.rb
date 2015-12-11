@@ -6,5 +6,5 @@ class Count < ActiveRecord::Base
 	validates_presence_of :cod
 	
 	belongs_to :user
-	
+	has_many :couches
 end

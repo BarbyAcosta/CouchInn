@@ -1,2 +1,42 @@
-<h1>Counts#index</h1>
-<p>Find me in app/views/counts/index.html.erb</p>
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-lg-10">
+
+	<div class="jumbotron"> 
+		<label for=“name"> <font face="arial" size="5" color="green"> Ingresa tus datos  </font> </label>
+	
+	  
+	<form action="demo_form.asp">
+
+			
+               Ingrese su numero de tarjeta: <input type="text" name="usrname" minlength="16" maxlength="16" ><br>
+
+               Ingrese su codigo de tarjeta: <input type="text" name="usrname" minlength="3" maxlength="3"><br>
+        
+               Ingrese la fecha de vencimiento de la tarjeta
+		      <input type="date" id="fecha_venc" name="fecha_ven" required>
+            
+                    
+                    <% if !@soy_premium %>
+                      <% @soy_premium= true %>
+
+                    <% end %>
+                  
+
+                 <input type="submit" value="Enviar">
+			          
+              
+           </form> 
+   
+ 
+
+		<p>
+
+			<p> <%= link_to "Volver", href="/couches/index" %> </p>
+
+		</p> 
+
+
+	</div>
+	
+</div>
