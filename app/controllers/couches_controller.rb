@@ -11,6 +11,7 @@ class CouchesController < ApplicationController
 
   def mis_couches
     @couches = current_user.couches
+    current_user.premium = false
   end 
 
   def show    

@@ -9,15 +9,14 @@
               
               <div class="col-md-4">
 
-                <%= form_for(@report) do |f| %>
-                  <label for=“name"> Ingrese fecha inicial </label>
-                  <input type="date" id="f_inicio" name="f_inicio" required>
+                <%= form_tag "/reports/ganancias" do %>
+                  <label> Indicar la fecha inicial </label> </br>
+                  <%= text_field_tag :f_inicio, "",type: 'date' %></br>
 
-                  <label for=“name"> Ingrese fecha final </label>
-                  <input type="date" id="f_final" name="f_final" required>
+                  <label> Indicar la fecha final </label> </br>
+                  <%= text_field_tag :f_fin,"" ,type: 'date' %> </br>
 
-                  <%= f.submit 'Enviar' %>
-                   
+                  <%= submit_tag 'Buscar' %>
                 <% end %>
 
 				

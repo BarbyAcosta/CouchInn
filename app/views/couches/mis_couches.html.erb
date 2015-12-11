@@ -5,7 +5,7 @@
 
 	<div class="jumbotron"> 
 		  
-		<label for=“name"> <font face="arial" size="5" color="green"> A continuacion se encuentra el listado de tus couches  </font> </label> 	
+		<label for="name"> <font face="arial" size="5" color="green"> A continuacion se encuentra el listado de tus couches  </font> </label> 	
 		<p>
 
 		</p>  
@@ -29,6 +29,15 @@
  			      <td>  <label for=“localidad"> <font face="arial" size="3" color="black"> <%= couch.description %> </font> </label></td>
 
  			      <td>  <label for=“localidad"> <font face="arial" size="3" color="black"> <%= couch.capacidad %> </font> </label></td>
+
+ 			      
+                    <td> <% if current_user.premium == true %>
+                     <% if !current_user.admin? %>
+                     <P style="COLOR: #000000; BACKGROUND-COLOR: #F7FE2E">PREMIUM</P> 
+                     <% end %>
+                  <% end %>  </td> 
+
+
 
  			      <td> <label for=“name"> <font face="arial" size="3" color="black">  <%= link_to "Editar",edit_couch_path(couch) %> </font> </label></td>
 

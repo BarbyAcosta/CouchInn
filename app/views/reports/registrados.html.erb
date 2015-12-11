@@ -9,14 +9,14 @@
               
               <div class="col-md-4">
 
-                <%= form_for (@report) do |f| %>
+                <%= form_tag "/reports/registrados" do %>
                   <label> Indicar la fecha inicial </label> </br>
-                  <%= f.text_field :f_inicio, type: 'date' %></br>
+                  <%= text_field_tag :f_inicio, "",type: 'date' %></br>
 
                   <label> Indicar la fecha final </label> </br>
-                  <%= f.text_field :f_fin, type: 'date' %> </br>
+                  <%= text_field_tag :f_fin,"" ,type: 'date' %> </br>
 
-                  <%= f.submit 'Enviar' %>
+                  <%= submit_tag 'Buscar' %>
                 <% end %>
 
               </div>
