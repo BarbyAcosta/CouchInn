@@ -1,5 +1,23 @@
 Rails.application.routes.draw do
 
+  get 'reports/show'
+
+  get 'reports/index'
+
+  get 'reports/new'
+
+  get 'reports/edit'
+
+  get 'reports/create'
+
+  get 'reports/update'
+
+  get 'reports/destroy'
+
+  get 'reports/registrados'
+
+  get 'reports/ganancias'
+
   get 'counts/index'
 
   get 'counts/show'
@@ -44,9 +62,9 @@ Rails.application.routes.draw do
 
   #rutas para los reportes de ganacias
   #y usuarios registrados entre dos fechas
-  get 'reports/ganancias'
+  #get 'reports/ganancias'
+  #get 'reports/registrados'
 
-  get 'reports/registrados'
 
   #ruta de la vista "acerca de"
   get 'posters/show'

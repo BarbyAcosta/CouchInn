@@ -30,7 +30,7 @@
             <div class="form-group">
                 <%= f.label :lastname, 'Apellido' %>
                 <%= f.text_field :lastname, class:'form-control' %>
-            </div>
+            </div>        
 
             <div class="form-group">
                 <%= f.label :dni, 'DNI' %>
@@ -47,6 +47,12 @@
                 <%= f.text_field :localidad, class:'form-control' %>
             </div>
 
+            <div class="form-group">
+                <%= f.label 'a_flag_true', 'Mujer' %>
+                <%= f.radio_button :genero, 'Mujer' %>
+                <%= f.label 'a_flag_true', 'Hombre' %>
+                <%= f.radio_button :genero, 'Hombre' %>
+            </div>
 
             <div class="form-group">
                 <%= f.label :Contraseña %>

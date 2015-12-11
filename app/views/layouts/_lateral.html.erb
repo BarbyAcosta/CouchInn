@@ -1,29 +1,35 @@
 <div class="col-md-2 col-xs-4 list-group">
 
-
 	<% if user_signed_in? %>
 
 		<% if current_user.admin? %>
+
+			<p>
+				Menú administrador:
+			</p>
 	 
 			<p> <%= link_to "Ver listado de los tipos de Couches", tipocouches_path %> </p>
 			<p> <%= link_to "Dar de alta un tipo de Couch", new_tipocouch_path %> </p>
+			<p> <%= link_to "Ver reportes de ganancias",reports_ganancias_path %> </p>
+			<p> <%= link_to "Ver reportes de usuarios",reports_registrados_path %> </p>
+			
+			<p>
+				Menú usuario:
+			</p>
+
+			<p> <%= link_to "Ver mis Couches",mis_couches_couches_path %> </p>
 			<p> <%= link_to "Ver lista de Couches",couches_index_path %> </p>
 			<p> <%= link_to "Reservas",reserves_index_path %> </p>
-			<p> <%= link_to "pasar mi cuenta a premium ",counts_new_path %> </p>
-			<p> <%= link_to "Ver mis Couches",mis_couches_couches_path %> </p>
-			<li><%= link_to 'Editar mi perfil',edit_user_registration_path %></li>
+			<p> <%= link_to "Pasar mi cuenta a premium ",counts_new_path %> </p>
 
 		<% else %>
 
+			<p> <%= link_to "Ver mis Couches",mis_couches_couches_path %> </p>
 			<p> <%= link_to "Ver lista de Couches",couches_index_path %> </p>
 			<p> <%= link_to "Reservas",reserves_index_path %> </p>
 			<p> <%= link_to "Pasar mi cuenta a premium ",counts_new_path %> </p>            
-			<p> <%= link_to "Ver mis Couches",mis_couches_couches_path %> </p>
-
-			<li><%= link_to 'Editar mi perfil',edit_user_registration_path %></li>
-
+			
 		<% end %>
-
 	 
 	<% end %>
 	

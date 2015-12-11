@@ -22,27 +22,19 @@ class TipocouchesController < ApplicationController
  
   def create
     @tipocouch = Tipocouch.new(params.require(:tipocouch).permit(:name, :description))
-
     if @tipocouch.save
       redirect_to tipocouches_path
     else
       render 'new'
     end
-
-    #@tipocouch.save
-    #redirect_to tipocouches_path
   end
 
   def update
-
      if @tipocouch.update_attributes(params.require(:tipocouch).permit(:name, :description))
       redirect_to tipocouches_path
     else
      render 'edit'
     end
-    #@tipocouch.update_attributes(params.require(:tipocouch).permit(:name, :description))
-
-    #redirect_to tipocouches_path
   end
 
   def destroy

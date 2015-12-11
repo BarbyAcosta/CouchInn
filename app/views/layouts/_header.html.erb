@@ -4,21 +4,21 @@
 		<%= link_to root_path do %>
 			<%= image_tag "logochiqui.png", title:"CouchInn", class:"img-responsive" %>
 		<% end %>
+		<% if !@estoy_en_vista %>
+			<%= link_to "Acerca de CouchInn", posters_show_path %>
+			<%@estoy_en_vista= false%>
+		<% end %>
 	</div>
 	
 	<div class="col-md-4 col-xs-4 text-center" style="text-align-center">
 		
 		<% if user_signed_in? %>
+			<%= link_to "Editar mi cuenta",edit_user_registration_path %>
 			<%= link_to "Cerrar Sesión", destroy_user_session_path, method:'delete' , class:'btn btn-default' %>
 		<% else %>
 			<%= link_to "Iniciar Sesión", new_user_session_path , class:'btn btn-default' %>
 			<%= link_to "Registrarse","/users/sign_up", class:'btn btn-default'%>
-		<% end %>	
-
-		<% if !@estoy_en_vista %>
-			<%= link_to "Acerca de", posters_show_path, class:'btn btn-default' %>
-			<%@estoy_en_vista= false%>
-		<% end %>
+		<% end %>		
 
 	</div>
 

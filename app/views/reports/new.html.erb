@@ -1,0 +1,43 @@
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-lg-10">
+
+	<div class="jumbotron"> 
+		<label for=“name"> <font face="arial" size="5" color="green"> Crear un reporte </font> </label>
+
+	<%= form_for(@report) do |f| %>
+
+		<% if @report.errors.any? %>
+  			<div id="error_explanation">
+    			<h2><%= pluralize(@report.errors.count, "error") %> No se ha guardado</h2>
+    			<ul>
+    				<% @report.errors.full_messages.each do |msg| %>
+      					<li><%= msg %></li>
+    				<% end %>
+    			</ul>
+  			</div>
+		<% end %>
+
+		<p>
+			<label> Indicar la fecha inicial </label> </br>
+   			<%= f.text_field :f_inicio, type: 'date' %></br>
+
+  			<label> Indicar la fecha de vuelta </label> </br>
+  			<%= f.text_field :f_fin, type: 'date' %> </br>
+		</p>
+		
+		<%= f.submit 'Guardar' %>
+
+    <% end %>
+ 
+
+		<p>
+
+			<p> <%= link_to "Volver", href="/welcome/index" %> </p>
+
+		</p> 
+
+
+	</div>
+	
+</div> 
